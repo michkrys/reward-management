@@ -1,0 +1,15 @@
+I had a lot of doubts about the business issues of how it should work.
+I decided on:
+1. Threshold values and the multiplier from which points are calculated are configured in the application.properties file.
+2. Due to the possibility of volatility of thresholds and multipliers, the number of bonus points for a given transaction is saved.
+3. Then we have a problem with updating the transaction, I did not want to make a decision here, therefore updating the bonus points of the transaction is not possible.
+4. The customer also has bonus points due to the fact that if we wanted to display them, for example, in a profile tab, etc.
+
+Comments:
+The database is pre-populated with data from the schema.sql file. (test data as well).
+
+Simplifications:
+If I were writing it commercially, I would decide to use liquibase, but I didn't want to exceed 4-8 hours, so I used schema.sql.
+Tests were written for every part that I consider worth testing, but not everything was tested because.
+I didn't want to exceed the time of 4-8 hours. I wanted to show how I would approach the tests of specific application segments.
+Due to the lack of time, I have not described the controllers satisfactorily either.
